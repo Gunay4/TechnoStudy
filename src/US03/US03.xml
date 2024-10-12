@@ -7,7 +7,7 @@
         <parameter name="browserType" value="chrome"> </parameter>
 
         <classes>
-            <class name="US02.US02_TC01"> </class>
+            <class name="US03.US03_TC01"> </class>
         </classes>
     </test>
 
@@ -15,7 +15,7 @@
         <parameter name="browserType" value="edge"> </parameter>
 
         <classes>
-            <class name="US02.US02_TC01"> </class>
+            <class name="US03.US03_TC01"> </class>
         </classes>
     </test>
 
