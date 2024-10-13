@@ -1,6 +1,5 @@
 package US01;
 
-import Utilities.BaseDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,12 +17,20 @@ public class Pom1 {
     @FindBy(xpath = "(//a[@role='menuitem'])[1]")
     public WebElement sdet;
 
-    @FindBy(xpath = "(//a[@role='menuitem'])[2]")
+    @FindBy(xpath = "//span[text()='Android Uygulama Geliştirme']")
     public WebElement androidDev;
 
-    @FindBy(xpath = "(//a[@role='menuitem'])[3]")
+    @FindBy(xpath = "//span[text()='Veri Bilimi']")
     public WebElement dataScience;
 
     @FindBy(xpath = "(//a[@role='menuitem'])[4]")
     public WebElement jobCenter;
+
+    @FindBy(css = "[alt='TechnoStudy']")
+    public WebElement technoStudybutton;
+
+    @FindBy(xpath = "//div[text()='Yeni alanlar keşfet.']")
+    public WebElement mainPageMessage;
+
+
 }
