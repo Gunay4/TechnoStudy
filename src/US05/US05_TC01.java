@@ -1,14 +1,15 @@
 package US05;
 
+import POM.POM;
 import Utilities.BaseDriverParameter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class US05_TC01 extends BaseDriverParameter {
-    @Test
+    @Test(groups = {"Smoke Test"})
     public void TC01() {
-        Pom5 pom = new Pom5(driver);
+        POM pom = new POM(driver);
         driver.get("https://techno.study/tr");
 
         for (int i = 0; i < pom.menus.size(); i++) {

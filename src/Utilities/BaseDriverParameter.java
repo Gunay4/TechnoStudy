@@ -22,7 +22,7 @@ public class BaseDriverParameter {
     public  Robot robot;
     public  JavascriptExecutor js;
 
-    @BeforeClass
+    @BeforeClass(groups = {"Smoke Test"})
     @Parameters("browserType")
     public void initialOperations(String browserType) throws AWTException {
 
@@ -43,7 +43,7 @@ public class BaseDriverParameter {
 
     }
 
-    @AfterClass
+    @AfterClass(groups = {"Smoke Test"})
     public void closingOperations(){
         Tools.wait(3);
         driver.quit();
