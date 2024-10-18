@@ -13,21 +13,14 @@ public class Pom5 {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//div[@data-elem-type='image']/a/img")
-    public List<WebElement> sMElements;
+    @FindBy(css= "[role='menuitem']>span")
+    public List<WebElement> menus;
 
-    @FindBy(xpath = "(//div[@data-elem-type='button']/a)[1]")
-    public WebElement apply;
+    @FindBy(css= "[alt='TechnoStudy']")
+    public WebElement homePageButton;
+
+    @FindBy(css = "[class*='centercontainer']>[role='list']>li>a")
+    public WebElement dDMenu;
 
 
-
-    public String sMLinks(int n){
-        List<String> links=new ArrayList<>();
-        links.add("facebook");
-        links.add("instagram");
-        links.add("youtube");
-        links.add("linkedin");
-
-        return links.get(n);
-    }
 }
