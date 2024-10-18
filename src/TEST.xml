@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="My Suit" parallel="tests" thread-count="2">
+
+    <test name="My Test 1">
+        <groups>
+            <run>
+                <include name="Smoke Test"></include>
+
+            </run>
+        </groups>
+        <parameter name="browserType" value="chrome"> </parameter>
+
+        <classes>
+            <class name="US01.US01_TC01"> </class>
+            <class name="US02.US02_TC01"> </class>
+            <class name="US03.US03_TC01"> </class>
+            <class name="US04.US04_TC01"> </class>
+            <class name="US05.US05_TC01"> </class>
+            <class name="US06.US06_TC01"> </class>
+            <class name="US07.US07_TC01"> </class>
+
+        </classes>
+
+
+    </test>
+
+   <test name="My Test 2">
+       <groups>
+           <run>
+               <include name="Smoke Test"></include>
+
+           </run>
+       </groups>
+        <parameter name="browserType" value="edge"> </parameter>
+
+       <classes>
+           <class name="US01.US01_TC01"> </class>
+           <class name="US02.US02_TC01"> </class>
+           <class name="US03.US03_TC01"> </class>
+           <class name="US04.US04_TC01"> </class>
+           <class name="US05.US05_TC01"> </class>
+           <class name="US06.US06_TC01"> </class>
+           <class name="US07.US07_TC01"> </class>
+
+       </classes>
+
+    </test>
+
+
+</suite>

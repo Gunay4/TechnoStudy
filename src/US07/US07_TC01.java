@@ -1,8 +1,7 @@
 package US07;
 
-import Utilities.BaseDriver;
+import POM.POM;
 import Utilities.BaseDriverParameter;
-import Utilities.Tools;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -11,9 +10,9 @@ import java.util.Set;
 
 public class US07_TC01 extends BaseDriverParameter {
 
-    @Test
+    @Test(groups = {"Smoke Test"})
     public void TC01() {
-        Pom7 pom = new Pom7(driver);
+        POM pom = new POM(driver);
         driver.get("https://techno.study/tr/");
         String homeID = driver.getWindowHandle();
         js.executeScript("arguments[0].scrollIntoView();", pom.termOfUse);

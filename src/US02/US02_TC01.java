@@ -1,6 +1,6 @@
 package US02;
 
-import Utilities.BaseDriver;
+import POM.POM;
 import Utilities.BaseDriverParameter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -8,14 +8,14 @@ import org.testng.annotations.Test;
 
 public class US02_TC01 extends BaseDriverParameter {
 
-    @Test
+    @Test(groups = {"Smoke Test"})
     public void testCampusLoginRedirect() {
 
         driver.get("https://techno.study/tr/");
 
-        Pom2 pom2 = new Pom2(driver);
+        POM pom = new POM(driver);
 
-        wait.until(ExpectedConditions.elementToBeClickable(pom2.campusLoginButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(pom.campusLoginButton)).click();
 
         wait.until(ExpectedConditions.urlContains("campus"));
 
