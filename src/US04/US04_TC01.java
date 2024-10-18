@@ -1,17 +1,18 @@
 package US04;
 
 import Utilities.BaseDriver;
+import Utilities.BaseDriverParameter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class US04_TC01 extends BaseDriver{
+public class US04_TC01 extends BaseDriverParameter {
 
     @Test
     public void Test01(){
 
-        Pom4 pom = new Pom4();
+        Pom4 pom = new Pom4(driver);
         driver.get("https://techno.study/tr/");
         String currentUrl = driver.getCurrentUrl();
 

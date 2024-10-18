@@ -1,13 +1,15 @@
 package US04;
 
 import Utilities.BaseDriver;
+import Utilities.BaseDriverParameter;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Pom4 {
-    public Pom4() {
-        PageFactory.initElements(BaseDriver.driver,this);
+    public Pom4(WebDriver driver) {
+        PageFactory.initElements(driver,this);
     }
 
     @FindBy(xpath= "//*[@id=\"rec684017893\"]/div/div/div[4]/a/img")
