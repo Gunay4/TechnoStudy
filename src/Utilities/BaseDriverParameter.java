@@ -1,6 +1,7 @@
 package Utilities;
 
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -19,6 +20,7 @@ public class BaseDriverParameter {
     public  WebDriverWait wait;
     public  Actions actions;
     public  Robot robot;
+    public  JavascriptExecutor js;
 
     @BeforeClass
     @Parameters("browserType")
@@ -37,6 +39,7 @@ public class BaseDriverParameter {
         wait=new WebDriverWait(driver, Duration.ofSeconds(20));
         actions = new Actions(driver);
         robot = new Robot();
+        js=(JavascriptExecutor) driver;
 
     }
 
