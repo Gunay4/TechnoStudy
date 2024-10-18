@@ -1,5 +1,6 @@
 package US01;
 
+import POM.POM;
 import Utilities.BaseDriverParameter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -9,36 +10,36 @@ public class US01_TC01 extends BaseDriverParameter {
 
     @Test()
     public void DropdownMenu() {
-        Pom1 pm1 = new Pom1(driver);
+        POM pom=new POM(driver);
         driver.get("https://techno.study/tr");
 
-        wait.until(ExpectedConditions.elementToBeClickable(pm1.courses)).click();
-        Assert.assertTrue(pm1.sdet.isDisplayed());
-        Assert.assertTrue(pm1.androidDev.isDisplayed());
-        Assert.assertTrue(pm1.dataScience.isDisplayed());
-        Assert.assertTrue(pm1.jobCenter.isDisplayed());
+        wait.until(ExpectedConditions.elementToBeClickable(pom.courses)).click();
+        Assert.assertTrue(pom.sdet.isDisplayed());
+        Assert.assertTrue(pom.androidDev.isDisplayed());
+        Assert.assertTrue(pom.dataScience.isDisplayed());
+        Assert.assertTrue(pom.jobCenter.isDisplayed());
 
-        wait.until(ExpectedConditions.visibilityOf(pm1.sdet)).click();
+        wait.until(ExpectedConditions.visibilityOf(pom.sdet)).click();
         Assert.assertTrue(driver.getCurrentUrl().contains("sdet"));
-        pm1.technoStudybutton.click();
+        pom.technoStudybutton.click();
 
-        wait.until(ExpectedConditions.textToBePresentInElement(pm1.mainPageMessage, "Yeni alanlar keşfet."));
-        actions.moveToElement(pm1.courses).build().perform();
-        wait.until(ExpectedConditions.elementToBeClickable(pm1.androidDev)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(pom.mainPageMessage, "Yeni alanlar keşfet."));
+        actions.moveToElement(pom.courses).build().perform();
+        wait.until(ExpectedConditions.elementToBeClickable(pom.androidDev)).click();
         Assert.assertTrue(driver.getCurrentUrl().contains("androidapp"));
-        pm1.technoStudybutton.click();
+        pom.technoStudybutton.click();
 
-        wait.until(ExpectedConditions.textToBePresentInElement(pm1.mainPageMessage, "Yeni alanlar keşfet."));
-        actions.moveToElement(pm1.courses).build().perform();
-        wait.until(ExpectedConditions.visibilityOf(pm1.dataScience)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(pom.mainPageMessage, "Yeni alanlar keşfet."));
+        actions.moveToElement(pom.courses).build().perform();
+        wait.until(ExpectedConditions.visibilityOf(pom.dataScience)).click();
         Assert.assertTrue(driver.getCurrentUrl().contains("veribilimi"));
-        pm1.technoStudybutton.click();
+        pom.technoStudybutton.click();
 
-        wait.until(ExpectedConditions.textToBePresentInElement(pm1.mainPageMessage, "Yeni alanlar keşfet."));
-        actions.moveToElement(pm1.courses).build().perform();
-        wait.until(ExpectedConditions.visibilityOf(pm1.jobCenter)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(pom.mainPageMessage, "Yeni alanlar keşfet."));
+        actions.moveToElement(pom.courses).build().perform();
+        wait.until(ExpectedConditions.visibilityOf(pom.jobCenter)).click();
         Assert.assertTrue(driver.getCurrentUrl().contains("jobcenter"));
-        pm1.technoStudybutton.click();
+        pom.technoStudybutton.click();
 
     }
 }

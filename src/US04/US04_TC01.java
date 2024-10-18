@@ -1,5 +1,6 @@
 package US04;
 
+import POM.POM;
 import Utilities.BaseDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -11,7 +12,7 @@ public class US04_TC01 extends BaseDriver{
     @Test
     public void Test01(){
 
-        Pom4 pom = new Pom4();
+        POM pom=new POM(driver);
         driver.get("https://techno.study/tr/");
         String currentUrl = driver.getCurrentUrl();
 

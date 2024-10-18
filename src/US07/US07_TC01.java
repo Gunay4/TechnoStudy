@@ -1,5 +1,6 @@
 package US07;
 
+import POM.POM;
 import Utilities.BaseDriver;
 import Utilities.BaseDriverParameter;
 import Utilities.Tools;
@@ -13,7 +14,7 @@ public class US07_TC01 extends BaseDriverParameter {
 
     @Test
     public void TC01() {
-        Pom7 pom = new Pom7(driver);
+        POM pom=new POM(driver);
         driver.get("https://techno.study/tr/");
         String homeID = driver.getWindowHandle();
         js.executeScript("arguments[0].scrollIntoView();", pom.termOfUse);

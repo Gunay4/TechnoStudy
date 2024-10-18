@@ -1,5 +1,6 @@
 package US02;
 
+import POM.POM;
 import Utilities.BaseDriver;
 import Utilities.BaseDriverParameter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,9 +14,9 @@ public class US02_TC01 extends BaseDriverParameter {
 
         driver.get("https://techno.study/tr/");
 
-        Pom2 pom2 = new Pom2(driver);
+        POM pom=new POM(driver);
 
-        wait.until(ExpectedConditions.elementToBeClickable(pom2.campusLoginButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(pom.campusLoginButton)).click();
 
         wait.until(ExpectedConditions.urlContains("campus"));
 
