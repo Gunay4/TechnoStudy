@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="My Suit" parallel="tests" thread-count="2">
+<suite name="My Suite" parallel="tests" thread-count="2">
 
     <test name="My Test 1">
 
         <parameter name="browserType" value="chrome"> </parameter>
 
         <classes>
-            <class name="US02.US02_TC01"> </class>
+            <class name="US04.US04_TC01"> </class>
         </classes>
     </test>
 
     <test name="My Test 2">
-        <parameter name="browserType" value="edge"> </parameter>
+        <parameter name="browserType" value="firefox"> </parameter>
 
         <classes>
-            <class name="US02.US02_TC01"> </class>
+            <class name="US04.US04_TC01"> </class>
         </classes>
     </test>
 
